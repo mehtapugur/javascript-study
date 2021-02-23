@@ -75,3 +75,29 @@ arr[3][0][1]; // equals 11`
  
  It is possible to have both local and global variables with the same name. When you do this, the local variable takes precedence over the global variable.
 
+ In order for JavaScript to compare two different data types (for example, numbers and strings), it must convert one type to another. This is known as "Type Coercion". Once it does, however, it can compare terms as follows:
+ `
+1   ==  1   // true
+1   ==  2   // false
+1   == '1'  // true
+"3" ==  3   // true `
+
+- Comparison with the Strict Equality Operator
+`
+3 ===  3   // true
+3 === '3'  // false`
+
+3 == '3'  // returns true because JavaScript performs type conversion from string to number
+3 === '3' // returns false because the types are different and type conversion is not performed
+
+- Note
+In JavaScript, you can determine the type of a variable or a value with the typeof operator, as follows:
+typeof 3   // returns 'number'
+typeof '3' // returns 'string'
+
+- Inequality Operator
+`3 !==  3   // false
+3 !== '3'  // true
+4 !==  3   // true `
+
+
