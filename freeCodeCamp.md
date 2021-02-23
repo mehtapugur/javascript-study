@@ -44,6 +44,7 @@ In JavaScript, you can escape a quote from considering it as an end of string qu
 In the goodStr above, you can use both quotes safely by using the backslash \ as an escape character.
 
 - Code	- Output
+
    \'   	single quote
   \"	    double quote
   \\	    backslash
@@ -53,7 +54,24 @@ In the goodStr above, you can use both quotes safely by using the backslash \ as
   \b	    word boundary
   \f	    form feed
   
-  
+In JavaScript, String values are immutable, which means that they cannot be altered once created.
+Note that this does not mean that myStr cannot be changed, just that the individual characters of a string literal cannot be changed. The only way to change myStr would be to assign it with a new string, like this:
 
+`var arr = [
+  [1,2,3],
+  [4,5,6],
+  [7,8,9],
+  [[10,11,12], 13, 14]
+];
+arr[3]; // equals [[10,11,12], 13, 14]
+arr[3][0]; // equals [10,11,12]
+arr[3][0][1]; // equals 11`
 
+`.pop()` removes the last element from an array and returns that element
+
+ `.shift()` It removes the first element
+ 
+ `.unshift()` adds the element at the beginning of the array.
+ 
+ It is possible to have both local and global variables with the same name. When you do this, the local variable takes precedence over the global variable.
 
