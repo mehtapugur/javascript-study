@@ -179,6 +179,139 @@ const sum = (...args) => {
 }
 console.log(sum(1, 2, 3)); // 6
 
+- Use the Spread Operator to Evaluate Arrays In-Place
+
+const arr = [6, 89, 3, 45];
+const maximus = Math.max(...arr); // returns 89
+
+...arr returns an unpacked array. In other words, it spreads the array. However, the spread operator only works in-place, like in an argument to a function or in an array literal. 
+
+Example:
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+arr2 = [];  // Change this line
+
+Copy all contents of arr1 into another array arr2 using the spread operator:
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+arr2 = [...arr1];
+
+- Use Destructuring Assignment to Extract Values from Objects
+
+Destructuring assignment is special syntax introduced in ES6, for neatly assigning values taken directly from an object.
+
+const user = { name: 'John Doe', age: 34 };
+
+Here's an equivalent assignment statement using the ES6 destructuring syntax:
+
+const { name, age } = user;
+// name = 'John Doe', age = 34
+
+You can extract as many or few values from the object as you want.
+
+- Use Destructuring Assignment to Assign Variables from Objects
+
+const user = { name: 'John Doe', age: 34 };
+
+Here's how you can give new variable names in the assignment:
+
+const { name: userName, age: userAge } = user;
+// userName = 'John Doe', userAge = 34
+
+You may read it as "get the value of user.name and assign it to a new variable named userName" and so on.
+
+Example2: 
+
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+const {today: highToday, tomorrow: highTomorrow} = HIGH_TEMPERATURES; 
+
+- Use Destructuring Assignment to Assign Variables from Nested Objects
+
+const user = {
+  johnDoe: { 
+    age: 34,
+    email: 'johnDoe@freeCodeCamp.com'
+  }
+};
+
+Here's how to extract the values of object properties and assign them to variables with the same name:
+
+const { johnDoe: { age, email }} = user;
+And here's how you can assign an object properties' values to variables with different names:
+
+const { johnDoe: { age: userAge, email: userEmail }} = user;
+
+Example 2:
+
+const LOCAL_FORECAST = {
+  yesterday: { low: 61, high: 75 },
+  today: { low: 64, high: 77 },
+  tomorrow: { low: 68, high: 80 }
+};
+
+const {today: {low: lowToday, high: highToday}} = LOCAL_FORECAST;
+
+- Use Destructuring Assignment to Assign Variables from Arrays
+
+const [a, b] = [1, 2, 3, 4, 5, 6];
+console.log(a, b); // 1, 2
+
+The variable a is assigned the first value of the array, and b is assigned the second value of the array. We can also access the value at any index in an array with destructuring by using commas to reach the desired index:
+
+const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
+console.log(a, b, c); // 1, 2, 5
+
+Example:
+
+let a = 8, b = 6;
+
+Use destructuring assignment to swap the values of a and b so that a receives the value stored in b, and b receives the value stored in a:
+
+[a, b] = [b, a];
+
+- Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements
+
+const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];
+console.log(a, b); // 1, 2
+console.log(arr); // [3, 4, 5, 7]
+
+Variables a and b take the first and second values from the array. After that, because of the rest parameter's presence, arr gets the rest of the values in the form of an array.
+
+- Use Destructuring Assignment to Pass an Object as a Function's Parameters
+
+In some cases, you can destructure the object in a function argument itself.
+
+const profileUpdate = (profileData) => {
+  const { name, age, nationality, location } = profileData;
+  // do something with these variables
+}
+This effectively destructures the object sent into the function. This can also be done in-place:
+
+const profileUpdate = ({ name, age, nationality, location }) => {
+  /* do something with these fields */
+}
+When profileData is passed to the above function, the values are destructured from the function parameter for use within the function.
+
+Example:
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+const half = (stats) => (stats.max + stats.min) / 2.0; 
+
+Use destructuring assignment within the argument to the function half to send only max and min inside the function:
+const half = ({ max, min }) => (max + min) / 2.0;
+
+
 
 
 
