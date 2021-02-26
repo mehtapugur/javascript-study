@@ -311,6 +311,180 @@ const half = (stats) => (stats.max + stats.min) / 2.0;
 Use destructuring assignment within the argument to the function half to send only max and min inside the function:
 const half = ({ max, min }) => (max + min) / 2.0;
 
+- Create Strings using Template Literals
+- 
+A new feature of ES6 is the template literal. This is a special type of string that makes creating complex strings easier.
+
+Template literals allow you to create multi-line strings and to use string interpolation features to create strings.
+
+Consider the code below:
+
+const person = {
+  name: "Zodiac Hasbro",
+  age: 56
+};
+
+// Template literal with multi-line and string interpolation
+const greeting = `Hello, my name is ${person.name}!
+I am ${person.age} years old.`;
+
+console.log(greeting); // prints
+// Hello, my name is Zodiac Hasbro!
+// I am 56 years old.
+
+- Write Concise Object Literal Declarations Using Object Property Shorthand
+
+const getMousePosition = (x, y) => ({
+  x: x,
+  y: y
+});
+
+Here is the same function from above rewritten to use this new syntax:
+
+const getMousePosition = (x, y) => ({ x, y });
+
+- Write Concise Declarative Functions with ES6
+
+When defining functions within objects in ES5, we have to use the keyword function as follows:
+
+const person = {
+  name: "Taylor",
+  sayHello: function() {
+    return `Hello! My name is ${this.name}.`;
+  }
+};
+
+With ES6, You can remove the function keyword and colon altogether when defining functions in objects. Here's an example of this syntax:
+
+const person = {
+  name: "Taylor",
+  sayHello() {
+    return `Hello! My name is ${this.name}.`;
+  }
+};
+
+- Use class Syntax to Define a Constructor Function
+
+class Vegetable {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // Should display 'carrot'
+
+- getter setter
+
+class Thermostat {
+  constructor(fahrenheit) {
+    this.fahrenheit = fahrenheit;
+  }
+  
+  get temperature() {
+    return (5 / 9) * (this.fahrenheit - 32);
+  }
+  
+  set temperature(celsius) {
+    this.fahrenheit = (celsius * 9.0) / 5 + 32;
+  }
+}
+
+- Use export to Share a Code Block
+
+export const add = (x, y) => {
+  return x + y;
+}
+The above is a common way to export a single function, but you can achieve the same thing like this:
+
+const add = (x, y) => {
+  return x + y;
+}
+
+export { add };
+
+When you export a variable or function, you can import it in another file and use it without having to rewrite the code. You can export multiple things by repeating the first example for each thing you want to export, or by placing them all in the export statement of the second example, like this:
+
+export { add, subtract };
+
+- Reuse JavaScript Code Using import
+
+import allows you to choose which parts of a file or module to load. In the previous lesson, the examples exported add from the math_functions.js file. Here's how you can import it to use in another file:
+
+import { add } from './math_functions.js';
+
+Here, import will find add in math_functions.js, import just that function for you to use, and ignore the rest. The ./ tells the import to look for the math_functions.js file in the same folder as the current file. The relative file path (./) and file extension (.js) are required when using import in this way.
+
+You can import more than one item from the file by adding them in the import statement like this:
+
+import { add, subtract } from './math_functions.js';
+
+Example:
+
+import {uppercaseString, lowercaseString} from './string_functions.js';
+
+- Use * to Import Everything from a File
+- 
+Suppose you have a file and you wish to import all of its contents into the current file. This can be done with the import * as syntax. Here's an example where the contents of a file named math_functions.js are imported into a file in the same directory:
+
+import * as myMathModule from "./math_functions.js";
+The above import statement will create an object called myMathModule. This is just a variable name, you can name it anything.
+
+- Create an Export Fallback with export default
+
+// named function
+export default function add(x, y) {
+  return x + y;
+}
+
+// anonymous function
+export default function(x, y) {
+  return x + y;
+}
+
+- Import a Default Export
+
+import add from "./math_functions.js";
+
+- Complete a Promise with resolve and reject
+
+const myPromise = new Promise((resolve, reject) => {
+  if(condition here) {
+    resolve("Promise was fulfilled");
+  } else {
+    reject("Promise was rejected");
+  }
+});
+
+- Handle a Fulfilled Promise with then
+
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer is set to true to represent a successful response from a server
+  let responseFromServer = true;
+    
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {  
+    reject("Data not received");
+  }
+});
+
+makeServerRequest.then(result => {
+  console.log(result);
+});
+
+- Handle a Rejected Promise with catch
+
+catch is the method used when your promise has been rejected. It is executed immediately after a promise's reject method is called. Here’s the syntax:
+
+myPromise.catch(error => {
+  // do something with the error.
+});
+
+
+
+
+
 
 
 
