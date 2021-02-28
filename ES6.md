@@ -424,7 +424,7 @@ Example:
 import {uppercaseString, lowercaseString} from './string_functions.js';
 
 - Use * to Import Everything from a File
-- 
+  
 Suppose you have a file and you wish to import all of its contents into the current file. This can be done with the import * as syntax. Here's an example where the contents of a file named math_functions.js are imported into a file in the same directory:
 
 import * as myMathModule from "./math_functions.js";
