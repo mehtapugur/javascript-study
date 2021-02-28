@@ -136,17 +136,17 @@ doubler(4); // returns 8
 If an arrow function has a single parameter, the parentheses enclosing the parameter may be omitted.
 
 // the same function, without the parameter parentheses
-const doubler = item => item * 2;
+`const doubler = item => item * 2;`
 
 It is possible to pass more than one argument into an arrow function.
 
 // multiplies the first input value by the second and returns it
-const multiplier = (item, multi) => item * multi;
-multiplier(4, 2); // returns 8
+`const multiplier = (item, multi) => item * multi;
+multiplier(4, 2); // returns 8`
 
 - Set Default Parameters for Your Functions
 
-const greeting = (name = "Anonymous") => "Hello " + name;
+`const greeting = (name = "Anonymous") => "Hello " + name;`
 
 console.log(greeting("John")); // Hello John
 console.log(greeting()); // Hello Anonymous
@@ -312,7 +312,7 @@ Use destructuring assignment within the argument to the function half to send on
 const half = ({ max, min }) => (max + min) / 2.0;
 
 - Create Strings using Template Literals
-- 
+ 
 A new feature of ES6 is the template literal. This is a special type of string that makes creating complex strings easier.
 
 Template literals allow you to create multi-line strings and to use string interpolation features to create strings.
@@ -477,9 +477,9 @@ makeServerRequest.then(result => {
 
 catch is the method used when your promise has been rejected. It is executed immediately after a promise's reject method is called. Here’s the syntax:
 
-myPromise.catch(error => {
+``myPromise.catch(error => {
   // do something with the error.
-});
+});``
 
 
 
