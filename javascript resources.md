@@ -11,3 +11,5 @@ Websites
 ES6
 
 https://github.com/fatihhayri/es6-turkce-kaynaklar
+
+Burada örnekler var https://www.yazilimkodlama.com/javascript/javascript-asal-sayi-kontol-etme/
