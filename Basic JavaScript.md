@@ -87,9 +87,9 @@ typeof '3' // returns 'string'
 
 - Inequality Operator
 
-    `3 !==  3   // false
-    3 !== '3'  // true
-    4 !==  3   // true `
+    ``3 !==  3   // false``
+    ``3 !== '3'  // true``
+    ``4 !==  3   // true``
 
 - Using Objects for Lookups
    Objects can be thought of as a key/value storage, like a dictionary. If you have tabular data, you can use an object to "lookup" values rather than a switch statement or an      if/else chain. This is most useful when you know that your input data is limited to a certain range.
