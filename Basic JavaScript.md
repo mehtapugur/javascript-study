@@ -1,15 +1,5 @@
 ## JavaScript Notes
 
-`my notes`
-
- **my notes**
- 
- - My Notes
-
-<br>
-
-----------------
-finished
 
 JavaScript provides eight different data types which are
  1. undefined
@@ -38,8 +28,8 @@ In JavaScript, you can escape a quote from considering it as an end of string qu
 
 `var sampleStr = "Alan said, \"Peter is learning JavaScript\".";`
 
-`goodStr = 'Jake asks Finn, "Hey, let\'s go on an adventure?"'; 
- badStr = 'Finn responds, "Let's go!"'; // Throws an error`
+```goodStr = 'Jake asks Finn, "Hey, let\'s go on an adventure?"'; 
+ badStr = 'Finn responds, "Let's go!"'; // Throws an error```
 
 In the goodStr above, you can use both quotes safely by using the backslash \ as an escape character.
 
@@ -57,7 +47,7 @@ In the goodStr above, you can use both quotes safely by using the backslash \ as
 In JavaScript, String values are immutable, which means that they cannot be altered once created.
 Note that this does not mean that myStr cannot be changed, just that the individual characters of a string literal cannot be changed. The only way to change myStr would be to assign it with a new string, like this:
 
-`var arr = [
+```var arr = [
   [1,2,3],
   [4,5,6],
   [7,8,9],
@@ -65,7 +55,7 @@ Note that this does not mean that myStr cannot be changed, just that the individ
 ];
 arr[3]; // equals [[10,11,12], 13, 14]
 arr[3][0]; // equals [10,11,12]
-arr[3][0][1]; // equals 11`
+arr[3][0][1]; // equals 11```
 
 `.pop()` removes the last element from an array and returns that element
 
@@ -76,11 +66,11 @@ arr[3][0][1]; // equals 11`
  It is possible to have both local and global variables with the same name. When you do this, the local variable takes precedence over the global variable.
 
  In order for JavaScript to compare two different data types (for example, numbers and strings), it must convert one type to another. This is known as "Type Coercion". Once it does, however, it can compare terms as follows:
- `
+ ```
 1   ==  1   // true
 1   ==  2   // false
 1   == '1'  // true
-"3" ==  3   // true `
+"3" ==  3   // true ```
 
 - Comparison with the Strict Equality Operator
 `
@@ -104,7 +94,7 @@ typeof '3' // returns 'string'
 - Using Objects for Lookups
    Objects can be thought of as a key/value storage, like a dictionary. If you have tabular data, you can use an object to "lookup" values rather than a switch statement or an      if/else chain. This is most useful when you know that your input data is limited to a certain range.
    
-     `var alpha = {
+     ```var alpha = {
         1:"Z",
         2:"Y",
         3:"X",
@@ -115,10 +105,10 @@ typeof '3' // returns 'string'
         26:"A"
     };
     alpha[2]; // "Y"
-    alpha[24]; // "C"` 
+    alpha[24]; // "C"```
     
 
-`var myStorage = {
+```var myStorage = {
   "car": {
     "inside": {
       "glove box": "maps",
@@ -128,7 +118,7 @@ typeof '3' // returns 'string'
       "trunk": "jack"
     }
   }
-};`
+};```
  
 Access the myStorage object and assign the contents of the glove box property to the gloveBoxContents variable:
 
