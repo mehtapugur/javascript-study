@@ -27,7 +27,7 @@ function factorialize(num) {
 }
 factorialize(5);
 ```
-</br>
+<hr>
 #### Find the Longest Word in a String
 
   - Solution 1
