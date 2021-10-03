@@ -28,6 +28,7 @@ function factorialize(num) {
 factorialize(5);
 ```
 <hr>
+
 #### Find the Longest Word in a String
 
   - Solution 1
@@ -94,7 +95,8 @@ function largestOfFour(arr) {
   });
 }
 ```
-</br>
+<hr>
+  
 #### Confirm the Ending
 
   - Solution 1
@@ -136,7 +138,7 @@ function truncateString(str, num) {
   return str.length > num ? str.slice(0, num) + "..." : str;
 }
 ```
-</br>
+<hr>
 #### Finders Keepers
 
   - Solution 1
@@ -175,7 +177,7 @@ function findElement(arr, func) {
     : arr[0];
 }
 ```
-</br>
+<hr>
 #### Boo who
 
   - Solution 1
@@ -215,7 +217,7 @@ function frankenSplice(arr1, arr2, n) {
 }
 frankenSplice([1, 2, 3], [4, 5, 6], 1);
 ```
-</br>
+<hr>
 #### Falsy Bouncer
 
   - Solution 1
@@ -236,7 +238,7 @@ function bouncer(arr) {
   return newArray;
 }
 ```
-</br>
+<hr>
 #### Where do I Belong
 
   - Solution 1
