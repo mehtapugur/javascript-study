@@ -139,6 +139,7 @@ function truncateString(str, num) {
 }
 ```
 <hr>
+
 #### Finders Keepers
 
   - Solution 1
@@ -178,6 +179,7 @@ function findElement(arr, func) {
 }
 ```
 <hr>
+
 #### Boo who
 
   - Solution 1
@@ -218,6 +220,7 @@ function frankenSplice(arr1, arr2, n) {
 frankenSplice([1, 2, 3], [4, 5, 6], 1);
 ```
 <hr>
+
 #### Falsy Bouncer
 
   - Solution 1
@@ -239,6 +242,7 @@ function bouncer(arr) {
 }
 ```
 <hr>
+
 #### Where do I Belong
 
   - Solution 1
