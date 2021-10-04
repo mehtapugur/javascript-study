@@ -83,5 +83,68 @@ Bird.prototype = {
 };
 ```
 
+### Inherit Behaviors from a Supertype
+
+```js
+function Animal() { }
+Animal.prototype = {
+  constructor: Animal,
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+let duck = Object.create(Animal.prototype); // Change this line
+let beagle = Object.create(Animal.prototype); 
+```
+
+### Override Inherited Methods
+
+```js
+function Animal() { }
+Animal.prototype.eat = function() {
+  return "nom nom nom";
+};
+function Bird() { }
+Bird.prototype = Object.create(Animal.prototype);
+Bird.prototype.eat = function() {
+  return "peck peck peck";
+};
+```
+
+### Use a Mixin to Add Common Behavior Between Unrelated Objects
+
+For unrelated objects, it's better to use mixins. A mixin allows other objects to use a collection of functions.
+```js
+let flyMixin = function(obj) {
+  obj.fly = function() {
+    console.log("Flying, wooosh!");
+  }
+};
+```
+The flyMixin takes any object and gives it the fly method.
+```js
+let bird = {
+  name: "Donald",
+  numLegs: 2
+};
+let plane = {
+  model: "777",
+  numPassengers: 524
+};
+
+flyMixin(bird);
+flyMixin(plane);
+```
+
+### Understand the Immediately Invoked Function Expression (IIFE)
+
+A common pattern in JavaScript is to execute a function as soon as it is declared:
+```js
+(function () {
+  console.log("Chirp, chirp!");
+})();
+```
+This is an anonymous function expression that executes right away, and outputs Chirp, chirp! immediately.
+
 
 
