@@ -46,7 +46,7 @@ newArray would have the value ["Dog", "Tiger"].
   - İkinci argüman sağlanmazsa, varsayılan, öğeleri sonuna kadar kaldırmaktır.
   - ***!!!*** splice yöntemi, çağrıldığı orijinal diziyi değiştirir.
 
-#### concat
+### concat
 
 İki diziyi birleştirmeye yarar. Örneğin:
 ```js
@@ -221,7 +221,7 @@ Problem: Fill in the urlSlug function so it converts a string title and returns 
   - The output should be all lower-cased letters
   - The output should not have any spaces
   
-````js
+```js
 function urlSlug(title) {
   return title
     .toLowerCase() // öncelikle bütün harfleri küçülttük
@@ -230,7 +230,27 @@ function urlSlug(title) {
     .join("-"); // kelimelerin arasına - koyarak diziyi stringe çevirdik
 }
 ```
-
-
+### arity
+ Bir fonksiyonun aritesi, ihtiyaç duyduğu argüman sayısıdır.
+ 
+ bu ile
+ 
+ ```js
+ function add(x) {
+  return function(y) {
+    return function(z) {
+      return x + y + z;
+    };
+  };
+}
+add(10)(20)(30);
+ ```
+ 
+ bu
+ ```js
+   return y => z => x + y + z;
+ ```
+ 
+aynıdır.
 
 
